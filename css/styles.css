@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+
+:root {
+  --main-blue: #0D0C22;
+  --main-pink: #EA4C89;
+  --bg-white: #EAECED;
+  --main-gray: #5C6269;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: var(--bg-white);
+}
+
+header {
+  padding: 0 20px;
+  background-color: var(--main-blue);
+  color: #eee;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header a {
+  text-decoration: none;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+}
+
+#logo a {
+  color: var(--main-pink);
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul a {
+  color: #eee;
+}
+
+ul li {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  color: var(--main-pink);
+}
+
+.container {
+  padding-top: 10em;
+  padding-bottom: 10em;
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+#intro, main p {
+  text-align: center;
+}
+
+main img {
+  display: block;
+  margin: 0 auto;
+  width: 30em;
+}
+
+.intro-container {
+  margin-top: 50px;
+}
+
+#intro {
+  margin-top: .5em;
+  margin-bottom: .5em;
+  font-size: 3rem;
+}
+
+.highlight {
+  color: var(--main-pink);
+}
+
+main p {
+  font-size: 1.5rem;
+  color: #777;
+}
+
+#contact {
+  background-color: var(--main-gray);
+  margin-top: 50px;
+  padding: 50px;
+}
+
+footer {
+  padding: 50px 0;
+  background-color: #000;
+  color: #eee;
+}
+
+footer p {
+  text-align: center;
+}
+
+
+
+@media (max-width:480px) {
+
+  main img {
+    width: 20em;    
+  }
+
+  #contact {
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
+}

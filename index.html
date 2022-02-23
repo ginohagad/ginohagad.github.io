@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/d592bd7a86.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/contact-form.css">
+  <title>Gino Hagad Tech Site</title>
+</head>
+<body>
+  <header>
+    <div id="logo"><a href="#home">GinoHagad <i class="fas fa-bolt"></i></a></div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <main>
+      <section id="home">
+        <img src="img/pc.jpg" alt="Photo by karsten madsen from Pexels">
+        <div class="intro-container">
+          <h1 id="intro">Hello, I'm <span class="highlight">Gino Hagad</span>.</h1>
+          <p>I am an IT Technician based in Wellington, New Zealand.</p>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <section id="contact">
+    <div class="contact-container">
+      <div class="fcf-body">
+
+          <div id="fcf-form">
+          <h3 class="fcf-h3">Get in touch</h3>
+
+          <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+              
+              <div class="fcf-form-group">
+                  <label for="Name" class="fcf-label">Your name</label>
+                  <div class="fcf-input-group">
+                      <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                  </div>
+              </div>
+
+              <div class="fcf-form-group">
+                  <label for="Email" class="fcf-label">Your email address</label>
+                  <div class="fcf-input-group">
+                      <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                  </div>
+              </div>
+
+              <div class="fcf-form-group">
+                  <label for="Message" class="fcf-label">Your message</label>
+                  <div class="fcf-input-group">
+                      <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                  </div>
+              </div>
+
+              <div class="fcf-form-group">
+                  <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+              </div>
+          </form>
+          </div>
+
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>Copyright &copy; GinoHagad.com</p> 
+  </footer>
+</body>
+</html>
