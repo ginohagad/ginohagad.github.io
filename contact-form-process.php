@@ -69,7 +69,7 @@ if (isset($_POST['Email'])) {
     <!-- include your success message below -->
 
     <p>Thank you for contacting me. I will be in touch with you very soon.</p>
-    <span><a href="https://www.ginohagad.com">Go back to GinoHagad.com</a></span>
+    <span><a href="http://www.ginohagad.com">Go back to GinoHagad.com</a></span>
 
 <?php
 }
