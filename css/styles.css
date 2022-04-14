@@ -71,12 +71,9 @@ ul li a:hover {
 .container {
   padding-top: 10em;
   padding-bottom: 10em;
-  width: 100%;
-  max-width: 60rem;
-  margin: 0 auto;
 }
 
-.contact-container {
+.container, .contact-container {
   width: 100%;
   max-width: 60rem;
   margin: 0 auto;
