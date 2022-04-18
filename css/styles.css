@@ -125,8 +125,12 @@ main p {
 
 .cards {
   display: flex;
-  gap: 1.3rem;
+
+  /*  gap: 1.3rem; */
+
 }
+
+/*
 
 .card {
   width: 30%;
@@ -139,6 +143,7 @@ main p {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+
 .card-container {
   padding: 2px 16px;
 }
@@ -146,6 +151,55 @@ main p {
 .card-container span {
   font-style: italic;
 }
+
+*/
+
+.cards .slide {
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.cards .slide.slide1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: .7s;
+  transform: translateY(100px);
+}
+
+.cards:hover .slide.slide1 {
+  transform: translateY(0px);
+}
+
+.cards .slide.slide2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: .8s;
+  transform: translateY(-100px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.cards:hover .slide.slide2 {
+  transform: translateY(0);
+}
+
+.cards .slide.slide2::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 
 #contact {
   background-color: var(--main-gray);
