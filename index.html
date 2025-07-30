@@ -1,1 +1,585 @@
-Test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Way to Salvation - Christ New Creation International</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gold-gradient: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            --heaven-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            overflow-x: hidden;
+        }
+
+        #cncilogo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .title-font { font-family: 'Playfair Display', serif; }
+        
+        .hero-bg { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="g" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0)"/></radialGradient></defs><circle cx="20" cy="20" r="2" fill="url(%23g)"/><circle cx="80" cy="40" r="1.5" fill="url(%23g)"/><circle cx="40" cy="80" r="1" fill="url(%23g)"/><circle cx="90" cy="80" r="2.5" fill="url(%23g)"/><circle cx="10" cy="60" r="1.5" fill="url(%23g)"/></svg>') repeat;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .enhanced-card { 
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(255, 255, 255, 0.8),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .enhanced-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+        
+        .enhanced-card:hover::before {
+            left: 100%;
+        }
+        
+        .enhanced-card:hover { 
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 
+                0 35px 60px -12px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(255, 255, 255, 0.9),
+                inset 0 1px 0 rgba(255, 255, 255, 1);
+        }
+        
+        .verse-highlight { 
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .verse-highlight::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+        }
+        
+        .step-icon {
+            background: linear-gradient(135deg, var(--color-start), var(--color-end));
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .step-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+        
+        .prayer-section { 
+            background: linear-gradient(135deg, #93affb 0%, #3333ef 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .prayer-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+        }
+        
+        .floating-cross {
+            position: absolute;
+            color: rgba(255,255,255,0.1);
+            font-size: 2rem;
+            animation: floatCross 15s ease-in-out infinite;
+        }
+        
+        @keyframes floatCross {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
+            50% { transform: translateY(-30px) rotate(10deg); opacity: 0.2; }
+        }
+        
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #667eea, transparent);
+            margin: 4rem 0;
+            position: relative;
+        }
+        
+        .section-divider::before {
+            content: '✨';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 0.5rem;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+        
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulseGlow {
+            from { box-shadow: 0 0 20px rgba(102, 126, 234, 0.4); }
+            to { box-shadow: 0 0 40px rgba(102, 126, 234, 0.8); }
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .golden-text {
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+        
+        .stagger-animation {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: staggerIn 0.8s ease-out forwards;
+        }
+        
+        @keyframes staggerIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .contact-card {
+            background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%);
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+        
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            padding: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: inherit;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-blue-50 text-gray-800">
+    <!-- Header -->
+    <header class="hero-bg text-white py-20 relative min-h-screen flex items-center">
+        <div class="floating-cross" style="top: 10%; left: 10%;">✝</div>
+        <div class="floating-cross" style="top: 20%; right: 15%; animation-delay: -5s;">✝</div>
+        <div class="floating-cross" style="bottom: 30%; left: 20%; animation-delay: -10s;">✝</div>
+        <div class="floating-cross" style="bottom: 20%; right: 10%; animation-delay: -7s;">✝</div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="stagger-animation" style="animation-delay: 0.2s;">
+                <h1 class="title-font text-5xl md:text-7xl font-bold mb-8 leading-tight">
+                    Where Will You Spend
+                    <span class="block golden-text">Eternity?</span>
+                </h1>
+            </div>
+            
+            <div class="stagger-animation verse-highlight text-gray-800 p-8 rounded-2xl max-w-4xl mx-auto relative z-10" style="animation-delay: 0.4s;">
+                <p class="text-xl md:text-2xl font-medium italic mb-4">
+                    "And just as it is appointed for man to die once, and after that comes judgment."
+                </p>
+                <p class="text-base md:text-lg font-bold text-purple-700">Hebrews 9:27</p>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator text-white">
+            <div class="flex flex-col items-center">
+                <span class="text-sm mb-2 opacity-75">Scroll to learn more</span>
+                <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+                    <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+        <!-- The Way to Salvation -->
+        <section class="mb-20">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-4xl md:text-6xl font-bold text-gradient mb-6">The Way to Salvation</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10 mb-16">
+                <!-- We are all Sinners -->
+                <div class="enhanced-card p-10 text-center group">
+                    <div class="w-20 h-20 step-icon rounded-full flex items-center justify-center mx-auto mb-8" style="--color-start: #ef4444; --color-end: #dc2626;">
+                        <span class="text-3xl">⚠️</span>
+                    </div>
+                    <h3 class="title-font text-2xl font-bold mb-6 text-red-600">We are all Sinners</h3>
+                    <div class="bg-red-50 p-6 rounded-xl mb-6">
+                        <p class="text-gray-700 text-lg italic mb-4">
+                            "For all have sinned and fall short of the glory of God."
+                        </p>
+                        <p class="text-sm font-bold text-red-600">Romans 3:23</p>
+                    </div>
+                    <div class="h-1 bg-gradient-to-r from-red-400 to-red-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </div>
+
+                <!-- Jesus Died for You -->
+                <div class="enhanced-card p-10 text-center group">
+                    <div class="w-20 h-20 step-icon rounded-full flex items-center justify-center mx-auto mb-8" style="--color-start: #8b5cf6; --color-end: #7c3aed;">
+                        <span class="text-3xl">✝️</span>
+                    </div>
+                    <h3 class="title-font text-2xl font-bold mb-6 text-purple-600">Jesus Died for You</h3>
+                    <div class="bg-purple-50 p-6 rounded-xl mb-6">
+                        <p class="text-gray-700 text-lg italic mb-4">
+                            "But God shows his love for us in that while we were still sinners, Christ died for us."
+                        </p>
+                        <p class="text-sm font-bold text-purple-600">Romans 5:8</p>
+                    </div>
+                    <div class="h-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </div>
+
+                <!-- Promise of Eternal Life -->
+                <div class="enhanced-card p-10 text-center group">
+                    <div class="w-20 h-20 step-icon rounded-full flex items-center justify-center mx-auto mb-8" style="--color-start: #10b981; --color-end: #059669;">
+                        <span class="text-3xl">🌟</span>
+                    </div>
+                    <h3 class="title-font text-2xl font-bold mb-6 text-green-600">Promise of Eternal Life</h3>
+                    <div class="bg-green-50 p-6 rounded-xl mb-6">
+                        <p class="text-gray-700 text-lg italic mb-4">
+                            "For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life."
+                        </p>
+                        <p class="text-sm font-bold text-green-600">John 3:16</p>
+                    </div>
+                    <div class="h-1 bg-gradient-to-r from-green-400 to-green-600 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                </div>
+            </div>
+
+            <!-- Key Verse -->
+            <div class="enhanced-card p-12 text-center pulse-glow">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-4xl mb-6">📖</div>
+                    <p class="title-font text-xl md:text-2xl text-gray-700 mb-6 italic leading-relaxed">
+                        "That if you confess with your mouth the Lord Jesus and believe in your heart that God has raised Him from the dead, you will be saved. For with the heart one believes unto righteousness, and with the mouth confession is made unto salvation."
+                    </p>
+                    <p class="text-lg font-bold text-gradient">Romans 10:9-10</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Three Steps -->
+        <section class="mb-20">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-4xl md:text-6xl font-bold text-gradient mb-6">Three Steps, One Way</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">The path to salvation is simple yet profound</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Acknowledge -->
+                <div class="enhanced-card p-10 group">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 step-icon text-white rounded-full flex items-center justify-center font-bold text-2xl mr-6" style="--color-start: #ef4444; --color-end: #dc2626;">A</div>
+                        <h3 class="title-font text-3xl font-bold text-red-600">ACKNOWLEDGE</h3>
+                    </div>
+                    <div class="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl mb-6">
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Acknowledge that you are a sinner. And only by the blood of Jesus that your sins can be forgiven. With His blood my sins are cleansed and will cleanse you from all unrighteousness.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600 text-xl">💔</div>
+                    </div>
+                </div>
+
+                <!-- Believe -->
+                <div class="enhanced-card p-10 group">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 step-icon text-white rounded-full flex items-center justify-center font-bold text-2xl mr-6" style="--color-start: #3b82f6; --color-end: #2563eb;">B</div>
+                        <h3 class="title-font text-3xl font-bold text-blue-600">BELIEVE</h3>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl mb-6">
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Believe in the Lord Jesus. That he was sent to die on the cross for the forgiveness of our sins.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xl">🙏</div>
+                    </div>
+                </div>
+
+                <!-- Confess -->
+                <div class="enhanced-card p-10 group">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 step-icon text-white rounded-full flex items-center justify-center font-bold text-2xl mr-6" style="--color-start: #10b981; --color-end: #059669;">C</div>
+                        <h3 class="title-font text-3xl font-bold text-green-600">CONFESS</h3>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl mb-6">
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Confess with your mouth that Jesus is your Lord and believe in your heart that He was raised from the dead.
+                        </p>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xl">🗣️</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="enhanced-card p-12 text-center mt-12">
+                <div class="text-5xl mb-6">🎁</div>
+                <p class="title-font text-2xl text-gray-700 mb-6 font-semibold">
+                    Receiving Jesus as your Lord and Savior brings The Gift of Eternal Life
+                </p>
+                <div class="bg-gradient-to-r from-yellow-50 to-orange-50 p-8 rounded-xl">
+                    <p class="text-xl text-gray-700 italic mb-4">
+                        "For by grace we are saved through faith not by works so that no man will boast."
+                    </p>
+                    <p class="text-lg font-bold golden-text">Ephesians 2:8-9</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Acceptance Prayer -->
+        <section class="mb-20">
+            <div class="prayer-section text-white p-16 rounded-3xl text-center relative">
+                <div class="relative z-10">
+                    <div class="text-6xl mb-8">🙏</div>
+                    <h2 class="title-font text-4xl md:text-6xl font-bold mb-12">Acceptance Prayer</h2>
+                    <div class="bg-white bg-opacity-20 backdrop-blur-sm p-12 rounded-2xl max-w-5xl mx-auto border border-white border-opacity-30">
+                        <div class="space-y-8 text-lg md:text-xl leading-relaxed">
+                            <p>
+                                Dear Heavenly Father I confess that I am a sinner and acknowledge that I cannot save myself. Thank you for sending your Son Jesus to die on the cross for the forgiveness of my sins. I am washed and I am forgiven.
+                            </p>
+                            <div class="flex justify-center">
+                                <div class="w-16 h-1 bg-white bg-opacity-50 rounded-full"></div>
+                            </div>
+                            <p>
+                                Now, I confess with my mouth that Jesus is my Lord and my Savior. And believe in my heart that Jesus was raised from the dead.
+                            </p>
+                            <div class="flex justify-center">
+                                <div class="w-16 h-1 bg-white bg-opacity-50 rounded-full"></div>
+                            </div>
+                            <p>
+                                With this I am saved and I received the gift of eternal life. I believe my name has now been written in the book of life and become your child. This I pray in Jesus Name,
+                            </p>
+                            <p class="title-font text-4xl font-bold mt-8">Amen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Church Information -->
+        <section class="mb-16">
+            <div class="contact-card p-16 rounded-3xl">
+                <div class="text-center mb-12">
+                    <!-- <div class="text-5xl mb-6">⛪</div> -->
+                    <img id="cncilogo" src="https://cncinternational.org/wp-content/uploads/2018/09/cnci-LOGO-1.png"/>
+                    <h2 class="title-font text-4xl md:text-5xl font-bold text-gradient mb-6">Christ New Creation International</h2>
+                    <p class="text-2xl text-blue-600 font-semibold mb-4">New Zealand</p>
+                    <p class="text-xl text-gray-600 italic golden-text font-medium">Helping You Grow Your Faith</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="enhanced-card p-8">
+                        <h3 class="title-font text-2xl font-bold text-gradient mb-6">About Us</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                            We are non-sectarian, non-denominational, evangelistic and missionary-sending church. Proclaiming salvation, healing, deliverance and the coming of our Lord Jesus Christ.
+                        </p>
+                        <h4 class="font-bold text-gray-800 mb-4 text-xl">Mission:</h4>
+                        <p class="text-gray-600 leading-relaxed text-lg">
+                            To encourage everyone to build a strong relationship with our Lord Jesus Christ, and to motivate every believers to grow and participate in fulfilling their calling and purpose in the Lord.
+                        </p>
+                    </div>
+
+                    <div class="enhanced-card p-8">
+                        <h3 class="title-font text-2xl font-bold text-gradient mb-6">Contact Us</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl">
+                                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white text-xl mr-4">👨‍💼</div>
+                                <div>
+                                    <p class="font-bold text-gray-800 text-lg">Pastor George Tungol</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl">
+                                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center text-white text-xl mr-4">📞</div>
+                                <p class="text-gray-700 text-lg font-medium">022 077 1572</p>
+                            </div>
+                            <div class="flex items-center p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl">
+                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-xl mr-4">📘</div>
+                                <p class="text-gray-700 text-lg font-medium">CNCI NZ - Lower North Island Ministries</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-12 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
+        <div class="relative z-10">
+            <div class="text-3xl mb-4">✨</div>
+            <p class="text-gray-300 text-lg">
+                © 2024 Christ New Creation International. Sharing the Gospel of Jesus Christ.
+            </p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                <div class="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+                <div class="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0) scale(1)';
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        // Apply staggered animations
+        document.querySelectorAll('.enhanced-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(50px) scale(0.95)';
+            card.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(card);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-bg');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Add sparkle effect on card hover
+        document.querySelectorAll('.enhanced-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const sparkle = document.createElement('div');
+                sparkle.innerHTML = '✨';
+                sparkle.style.position = 'absolute';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.pointerEvents = 'none';
+                sparkle.style.animation = 'sparkle 1s ease-out forwards';
+                this.appendChild(sparkle);
+                
+                setTimeout(() => sparkle.remove(), 1000);
+            });
+        });
+
+        // Add sparkle animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes sparkle {
+                0% { opacity: 0; transform: scale(0) rotate(0deg); }
+                50% { opacity: 1; transform: scale(1) rotate(180deg); }
+                100% { opacity: 0; transform: scale(0) rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9673d6bfe1edd99a',t:'MTc1Mzg2Nzg0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
